@@ -1,0 +1,44 @@
+{
+	"name": "Imgchvmd",
+	"version": "0.1.0",
+	"author": [
+		"Xhlgr"
+	],
+	"url": "",
+	"descriptionmsg": "imgchvmd-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"AutoloadClasses": {
+		"ImgchvmdHooks": "includes/ImgchvmdHooks.php"
+	},
+	"Hooks": {
+		"OutputPageParserOutput": "ImgchvmdHooks::onOutputPageParserOutput"
+	},
+	"config": {
+		"ImgchvmdDomainName": {
+			"description": "DomainName in external link by Chevereto website.",
+			"value": []
+		}
+	},
+	"MessagesDirs": {
+		"Imgchvmd": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "Imgchvmd/resources"
+	},
+	"ResourceModules": {
+		"ext.imgchvmd": {
+			"dependencies": [],
+			"messages": [],
+			"styles": [],
+			"scripts": []
+		}
+	},
+	"manifest_version": 2
+}

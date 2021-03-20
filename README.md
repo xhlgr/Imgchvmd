@@ -8,5 +8,5 @@
 ## 使用方法
 * 下载放在extensions/文件夹内；
 * 在LocalSettings.php加入`wfLoadExtension( 'Imgchvmd' );`；
-* 设置参数`$wgImgchvmdDomainName=["s1.ax1x.com","s2.ax1x.com","s3.ax1x.com"];`（以路过图床的外链为例，需要填写完整子域名，任何Chevereto程序的图床网站外链均可）；
+* 设置参数`$wgImgchvmdDomainName=["子域名"];`（需要填写完整子域名，如a.xxx.com，需要填写完整子域名，任何Chevereto程序的图床网站外链均可）；
 * 完成。

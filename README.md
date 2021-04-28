@@ -8,5 +8,7 @@
 ## 使用方法
 * 下载放在extensions/文件夹内；
 * 在LocalSettings.php加入`wfLoadExtension( 'Imgchvmd' );`；
-* 设置参数`$wgImgchvmdDomainName=["子域名"];`（需要填写完整子域名，如a.xxx.com，需要填写完整子域名，任何Chevereto程序的图床网站外链均可）；
+* 设置参数`$wgImgchvmdDomainName=["域名"];`（填写主域名（其子域名均进行操作）或子域名，如xxx.com或a.xxx.com，任何Chevereto程序的图床网站外链均可，需要中等图片链接只是在文件扩展名前面加“.md”的才行）；
 * 完成。
+## 更新日志
+* 20210428：对$wgImgchvDomainName增加主域名判断，无需逐一设置子域名；php curl判断中等图片链接是否存在（可能耗费服务器资源，因为当图片小于chevereto设置的中等图片宽度或高度时，不会生成中等图片。尝试img标签使用onerror让前端处理没有作用，故此下策），增加判断后可以将判断.jpg的代码去掉即判断所有扩展名的文件是否存在md中等图片并加载。

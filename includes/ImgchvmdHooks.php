@@ -27,7 +27,6 @@ class ImgchvmdHooks {
         		$tmp1 = substr($tmpurl,0,strrpos($tmpurl,'.'));
         		$tmp2 = substr($tmpurl,strrpos($tmpurl,'.'));
         		$mdurl = 'https://'.$tmp1.'.md'.$tmp2;
-        		echo $mdurl.'<br>';
         		/*curl the md link to sure it exist*/
         	    $ch = curl_init();
                 curl_setopt($ch,CURLOPT_URL,$mdurl);

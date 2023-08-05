@@ -1,21 +1,22 @@
 {
 	"name": "Imgchvmd",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": [
 		"Xhlgr"
 	],
-	"url": "",
+	"url": "https://github.com/xhlgr/Imgchvmd",
 	"descriptionmsg": "imgchvmd-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"AutoloadClasses": {
 		"ImgchvmdHooks": "includes/ImgchvmdHooks.php"
 	},
 	"Hooks": {
-		"OutputPageParserOutput": "ImgchvmdHooks::onOutputPageParserOutput"
+		"OutputPageParserOutput": "ImgchvmdHooks::onOutputPageParserOutput",
+		"BeforePageDisplay": "ImgchvmdHooks::onBeforePageDisplay"
 	},
 	"config": {
 		"ImgchvmdDomainName": {
@@ -34,10 +35,9 @@
 	},
 	"ResourceModules": {
 		"ext.imgchvmd": {
-			"dependencies": [],
-			"messages": [],
-			"styles": [],
-			"scripts": []
+			"styles": ["imgchvmd.css"],
+			"scripts": ["imgchvmd.js"],
+			"targets": ["desktop","mobile"]
 		}
 	},
 	"manifest_version": 2
